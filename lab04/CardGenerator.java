@@ -9,8 +9,8 @@ public class CardGenerator{
         String suit;
         
         //randomly select the suit and value of the card
-        randNumber=(int)(Math.random()*12)+2;
-        randSuit=(int)(Math.random()*3)+1;
+        randNumber=(int)(Math.random()*13)+2;
+        randSuit=(int)(Math.random()*4)+1;
         
         //convert the suit numerical value to a string
         if(randSuit==4){
