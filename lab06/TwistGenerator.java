@@ -26,11 +26,11 @@ public class TwistGenerator{
                 }
                 else{
                     System.out.println("Please input a positive number.");
-                    myScanner.next();
+                    test=false;
+                    
                 }
             }
         }
-        
         //Print the twist
         for(int i=0; i<3; i++){
             //System.out.println(i);
