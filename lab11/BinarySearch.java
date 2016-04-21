@@ -48,7 +48,7 @@ public class BinarySearch{
              if(search>=0){
                  while(test==false){
                      half=(int)binaryBottom+(binaryTop-binaryBottom)/2;
-                     if(search==array2[half]){
+                     if(search==array2[half] || search==array2[binaryBottom] || search==array2[binaryTop]){
                         System.out.println("That number is in the array");
                         break;
                      }

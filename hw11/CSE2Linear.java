@@ -29,12 +29,39 @@ public class CSE2Linear{
                 System.out.println(value+" was not found in in the list in "+(i+1)+" iterations.");
             }
     }
+    public static void BinarySearch(int value, int[] array){
+        boolean test=false;
+        int binaryBottom=0;
+        int binaryTop=array.length-1;
+        int half;
+        int i=1;
+        while(test==false){
+                     half=(int)binaryBottom+(binaryTop-binaryBottom)/2;
+                     if(value==array[half] || value==array[binaryBottom] || value==array[binaryTop]){
+                        System.out.println(value+" was found in the array in "+i+" iterations.");
+                        break;
+                     }
+                     if(value>array[half]){
+                         binaryBottom=half;
+                     }
+                     if(value<array[half]){
+                         binaryTop=half;
+                     }
+                     if(binaryTop-binaryBottom==1){
+                         System.out.println( value+" was not found on the list in "+i+" iterations.");
+                         test=true;
+                     }
+                     i++;
+        }
+    }
+    
     public static void PrintArray(int[] array){
         for(int i=0;i<array.length;i++){
             System.out.print(array[i] +" ");
         }
         System.out.println("");
     }
+    
     public static void main(String[] args){
         int[] input=new int[15];
         boolean test=false;
@@ -58,7 +85,7 @@ public class CSE2Linear{
         }
         PrintArray(input);
         System.out.println("Input a number to search for");
-        LinearSearch(myScanner.nextInt(),input);
+        BinarySearch(myScanner.nextInt(),input);
         Scrambler(input);
         PrintArray(input);
         System.out.println("Input another number to search for");
